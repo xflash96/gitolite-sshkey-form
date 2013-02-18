@@ -62,7 +62,8 @@ def index():
     env = {
         'remote_user' : remote_user,
         'sshkeys'     : list(keys),
-        'enable_identities' : app.config['ENABLE_IDENTITIES']
+        'enable_identities' : app.config['ENABLE_IDENTITIES'],
+        'home_url'    : app.config['HOME_URL'],
     }
 
     if app.config['ENABLE_IDENTITIES']:

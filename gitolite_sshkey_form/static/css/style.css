@@ -1,8 +1,11 @@
 body {
     text-align:center;
-    font-family: "Lucida Grande",Verdana,"Bitstream Vera Sans",Arial,sans-serif;
-    font-size: 11px;
-    color: #111;
+    font-family: Helvetica,arial,freesans,clean,sans-serif;
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.4;
+    margin: 0;
+    background-color: #fff;
 }
 
 pre {
@@ -102,10 +105,36 @@ div#oneline-error img {
     padding-bottom: 2px;
 }
 
-.centered-within {
-    text-align: center;
-    font-style: bold;
-    padding-bottom:10px;
+.page_header{
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding: 0 27px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: Helvetica, Arial, Freesans, Clean, sans-serif;
+    background: #FFFFFF; /* old browsers */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#F5F5F5)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=0 ); /* ie */
+    background: -o-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.page_header a:hover {
+  font-weight: bold;
+  padding: 3px;
+  text-decoration: underline;
+}
+
+.page_header a:first-child {
+  background: transparent;
+}
+
+.page_header img.logo {
+  position: relative;
+  top: 7px;
+  margin-right: 5px;
 }
 
 .text-area-inactive {

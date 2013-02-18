@@ -22,3 +22,5 @@ IDENTITIES_DB = '<changeme>'
 
 # show public key addition/removal log on /log
 ENABLE_LOG = True
+
+HOME_URL = 'example.com'
