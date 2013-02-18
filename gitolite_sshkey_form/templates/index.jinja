@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
   <title id='title'>Git - Key Config</title>
-  <link rel="shortcut icon" href="static/images/git-favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="/static/images/git-favicon.png" type="image/png" />
 
   <!-- css -->
   <link rel='stylesheet' href='{{ url_for('static', filename="css/reset.css") }}'>
@@ -19,14 +19,14 @@
 
 <body>
   <div class="page_header">
-    <a title="git homepage" href="{{ home_url }}"><img class="logo" height="27" src="static/images/git-logo.png" alt="git" width="72" /></a> Public Keys of {{ remote_user }}
+    <a title="git homepage" href="{{ home_url }}"><img class="logo" height="27" src="/static/images/git-logo.png" alt="git" width="72" /></a> Public Keys of {{ remote_user }}
   </div>
   <div id='loading'></div>
 
   <div class='centered'>
 
     <div id='oneline-error'>
-      <img src='{{ url_for('static', filename="images/sweetieplus/with-shadows/warning-16.png") }}'></img>
+      <img src='{{ url_for('static', filename="/images/sweetieplus/with-shadows/warning-16.png") }}'></img>
       <span></span>
     </div>
 

@@ -104,7 +104,6 @@ div#oneline-error img {
     line-height: 50px;
     position: relative;
     padding: 0 27px;
-    margin-bottom: 20px;
     font-size: 20px;
     font-family: Helvetica, Arial, Freesans, Clean, sans-serif;
     background: #FFFFFF; /* old browsers */
@@ -113,12 +112,6 @@ div#oneline-error img {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=0 ); /* ie */
     background: -o-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
     border-bottom: 1px solid #dfdfdf;
-}
-
-.page_header a:hover {
-  font-weight: bold;
-  padding: 3px;
-  text-decoration: underline;
 }
 
 .page_header a:first-child {
