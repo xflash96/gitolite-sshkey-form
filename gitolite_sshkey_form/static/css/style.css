@@ -1,5 +1,4 @@
 body {
-    text-align:center;
     font-family: Helvetica,arial,freesans,clean,sans-serif;
     font-size: 13px;
     color: #000000;
@@ -50,11 +49,6 @@ button.btn {
     text-align:left;
     padding:15px;
     border:0px solid #333;
-}
-
-.content {
-    padding: 50px 0px;
-    line-height: 22px;
 }
 
 /* jQuery icons */
@@ -152,7 +146,7 @@ div#oneline-error img {
 }
 
 #faq > .ui-widget {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 

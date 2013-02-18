@@ -19,10 +19,9 @@
 
 <body>
   <div class="page_header">
-  <a title="git homepage" href="{{ home_url }}"><img class="logo" height="27" src="static/images/git-logo.png" alt="git" width="72" /></a><a href="/git">SSH Keys of {{ remote_user }}</a> </div>
+    <a title="git homepage" href="{{ home_url }}"><img class="logo" height="27" src="static/images/git-logo.png" alt="git" width="72" /></a> Public Keys of {{ remote_user }}
+  </div>
   <div id='loading'></div>
-
-  <div class='content'>
 
   <div class='centered'>
 
@@ -84,18 +83,17 @@
 
         <h3><a href='#'>How do I find my ssh public key?</a></h3>
         <div>
-          <p> Your ssh public key is usually located in <tt>~/.ssh/id_rsa.pub</tt> or
+            <p> Your ssh public key is usually located in <tt>~/.ssh/id_rsa.pub</tt> or
             <tt>C:\Documents and Settings\John\.ssh\id_rsa.pub</tt>.
-          </p>
-          <p> It is entirely possible to have different key pairs for different
+            </p>
+            <p> It is entirely possible to have different key pairs for different
             hosts, in which case you should refer to the <tt>Host</tt> and <tt>IdentityFile</tt> options in <a href="http://www.openbsd.org/cgi-bin/man.cgi?query=ssh_config">ssh_config</a>.
-          </p>
+            </p>
         </div>
-      </div>
     </div>
+    </div>
+</div>
 
-  </div>
-  </div>
 </body>
 
 </html>
