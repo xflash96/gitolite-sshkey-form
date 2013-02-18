@@ -10,7 +10,6 @@ from gitolite_sshkey_form.util import iskeyvalid, listkeys64, urlsafe_b64decode
 from gitolite_sshkey_form.dir  import Dir
 from gitolite_sshkey_form.gitadmin import GitAdmin
 from gitolite_sshkey_form.gitolite import Gitolite
-from gitolite_sshkey_form.identities import Identities
 
 
 def repoconnect():
@@ -46,10 +45,6 @@ def initialize():
     if not store:
         flask.g.store = repoconnect()
 
-    if with_idn and not identities:
-        sql = app.open_resource('schema.sql').read()
-        flask.g.identities = Identities(app.config['IDENTITIES_DB'], sql)
-
 
 @app.route('/')
 def index():
@@ -65,13 +60,6 @@ def index():
         'enable_identities' : app.config['ENABLE_IDENTITIES'],
         'home_url'    : app.config['HOME_URL'],
     }
-
-    if app.config['ENABLE_IDENTITIES']:
-        # this is where you could set the user's identity to a reasonable
-        # default (from ldap for example)
-
-        identity = flask.g.identities.get(remote_user)
-        env['git_identity'] = identity and identity or ''
 
     return flask.render_template('index.jinja', **env)
 
@@ -121,18 +109,6 @@ def setidentity():
     app.logger.info('Updated identity for user "%s" to "%s"', remote_user, identity)
     return flask.Response(status=200)
 
-
-@app.route('/get-identity/<alias>', methods=['POST', 'GET'])
-def getidentity(alias):
-    if not app.config['ENABLE_IDENTITIES']:
-        return flask.Response(status=404)
-
-    identity = flask.g.identities.get(alias)
-
-    if not identity:
-        return flask.Response('Identity for user %s not found' % alias, status=400)
-
-    return flask.Response(identity, status=200)
 
 
 @app.route('/log', methods=['GET'])
