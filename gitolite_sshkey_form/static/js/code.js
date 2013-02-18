@@ -51,7 +51,7 @@ $(function () {
             var keynum = $(parent).data('machine');
 
             $.ajax({
-                url   : location.pathname + 'drop/' + keynum,
+                url   : location.pathname + '/drop/' + keynum,
                 type  : 'POST',
                 data  : {},
                 error : onErrorShort,
@@ -67,7 +67,7 @@ $(function () {
         var identity = $.trim( $('div#git-identity input').val() );
 
         $.ajax({
-            url   : location.pathname + 'set-identity',
+            url   : location.pathname + '/set-identity',
             type  : 'POST',
             data  : {'identity' : identity},
             error : onErrorShort,
@@ -83,7 +83,7 @@ $(function () {
         };
 
         $.ajax({
-            url   : location.pathname + 'add',
+            url   : location.pathname + '/add',
             type  : 'POST',
             data  : {'key' : key},
             dataType : 'json',
