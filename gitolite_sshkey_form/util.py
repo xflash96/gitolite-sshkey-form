@@ -19,9 +19,9 @@ def pairwise(iterable):
     return izip(a, b)
 
 def onlyint(data):
-    if type(data) == IntType: return data
+    if isinstance(data, int): return data
 
-    if type(data) == StringType:
+    if isinstance(data, basestring):
         if data.isdigit(): return int(data)
 
 def nextinseq(seq, start=0):
